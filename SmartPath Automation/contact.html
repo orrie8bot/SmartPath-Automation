@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Page</title>
+        <link href="CSS/style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div id="header-logo">
+                <img class="logo" src="CSS/images/logo.jpg">
+                
+                <!-- Navigation -->
+                <nav role="navigation">
+                    <ul>
+                        <li><a href="index.html">SmartPath Automation</a>
+                             <ul class="dropdown">
+                                <li><a href="aboutme.html">About Me</a></li>
+                                <li><a href="experience.html">Experience</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </li>    
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+            <!-- Contact Form -->
+         
+        <div id="contact-page">
+            <div class="contact-header">
+                <img src="CSS/images/camera.jpeg">
+                <h1>Say Hello</h1>
+                <h2>Need assistance with Robotic programming?</h2>
+            </div>
+
+            <div class="contact-form">
+                <form id="contact-form" method="post" action="contact.php">
+                    
+                    <input name="name" type="text" class="form-control" placeholder="Your Name" required><br>
+                    
+                    <input name="email" type="email" class="form-control" placeholder="Your Email" required><br> 
+                    
+                    <textarea name="message" class="form-control" placeholder="Message" row="4" required></textarea><br>
+
+                    <input type="submit" class="form-control submit" value="Send Message">
+                </form>
+            </div>
+        </div>
+    </body>
+
+    <!-- Footer Section -->
+    <footer>
+        <h4>SmartPath Automation</h4>
+        <p><a href="contact.html">Email: Douglas.Webber@SmartPathAutomation.com</a></p>
+        <small><span>Copyright &#169 2021 Loren Price.  All rights reserved.</span></small>
+    </footer>
+</html>

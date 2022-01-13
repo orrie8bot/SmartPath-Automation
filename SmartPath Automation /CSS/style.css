@@ -1,0 +1,631 @@
+ html {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(17, 17, 17);
+  color:rgb(246, 149, 4);
+}
+
+body {
+  font-size: 22px;
+}
+
+/* logo & Navigation */
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+#header-logo {
+  background-color: black;
+  display: block;
+  position: relative;
+  height: 80px;
+}
+
+.logo {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  width: 50px;
+  height: 55px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  background-color: black;
+  display: inline-block;
+  position: absolute;
+  opacity: 1;
+  padding: 10px;
+  z-index: 5;
+}
+
+nav ul {
+  background-color: black;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+nav li {
+  background-color: black;
+  display: block;
+  position: relative;
+  transition-duration: 0.5s;
+  font-size: 20px;
+  float: left;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+nav li a {
+  color:rgb(246, 149, 4);
+}
+
+nav li:hover,
+nav li:focus-within {
+  background: rgb(70, 71, 71);
+  cursor: pointer;
+}
+
+nav li:focus-within a {
+  outline: none;
+}
+
+nav ul li ul {
+  background-color: black;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+nav ul li:hover > ul,
+ul li:focus-within > ul, 
+ul li ul:hover, 
+ul li ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+nav ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+/* Home Page - index.html */
+/* Banner & Title */
+#container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  max-width: 100%;
+  z-index: 1;
+}
+
+.container_img {
+  display: flex;
+  position: relative;
+  height: 650px;
+  width: 100%;
+}
+
+.header_overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  font-size:larger;
+  position: absolute;
+  border-top: 1px solid orange;
+  border-bottom: 1px solid orange;
+  width: 100%;
+  opacity: 70%;
+}
+
+/* Main */
+#mission {
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  padding: 60px;
+  line-height: 1.5em;
+  opacity: 80%;
+}
+
+#mission h2 {
+  font-size: 26px;
+  font-weight: 600;
+  text-decoration: wavy;
+}
+
+#mission p {
+  font-size: 22px;
+}
+
+/* 3 Image Containers */
+#section_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  z-index: 1;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#section_container ul {
+  padding: 10px;
+}
+
+.img_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img_container li {
+  display: flex;
+}
+
+.img_container img {
+  display: flex;
+  width: 425px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  border-top: 1px solid gray;
+  text-align: center;
+  font-weight: bold;
+}
+
+footer h4 {
+  font-size: 26px;
+  font-weight: 100;
+  opacity: 70%;
+}
+
+footer p a {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-right: 10px;
+  color:rgb(246, 149, 4);
+  opacity: 60%;
+}
+
+footer span {
+  font-size: 10px;
+  color: lightgray;
+}
+
+/* Contact Page */
+#contact-page {
+  margin: 1rem;
+  padding: 10rem;
+  text-align: center;
+}
+
+.contact-header {
+  color: rgb(246, 149, 4);
+  text-transform: uppercase;
+  transition: all 4s ease-in-out;
+}
+
+.contact-header img {
+  max-width: 2050px;
+  max-height: 550px;
+  align-items: center;
+  opacity: 50%;
+  z-index: 1;
+}
+/* Form Header */
+.contact-header h1 {
+  font-size: 36px;
+  line-height: 20px;
+  z-index: 2;
+}
+
+.contact-header h2 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  z-index: 3;
+}
+
+/* Form Section */ 
+form {
+  margin-top: 0;
+  transition: all 4s ease-in-out;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control {
+  width: 50%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+input {
+  height: 50px;
+}
+
+form .submit {
+  background: rgba(246, 169, 4, 1);
+  border-color: transparent;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+form .submit:hover {
+  background-color: #f44336;
+  cursor: pointer;
+}
+
+/* About Me */
+/* About - Banner & Title */
+
+#about_container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  max-width: 100%;
+  z-index: 1;
+}
+
+.about_container_img {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 650px;
+  opacity: 40%;
+  max-width: 1500px;
+}
+
+.about_overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  font-size: 45px;
+  position: absolute;
+  border-top: 1px solid orange;
+  border-bottom: 1px solid orange;
+  width: 50%;
+  opacity: 80%;
+  padding: 20px;
+}
+
+/* About - History Section */
+#about-history {
+  text-align: center;
+  line-height: 1.5em;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 4em;
+}
+
+.history h3 {
+  font-size: 36px;
+  text-decoration: underline;
+  opacity: 90%;
+}
+
+.history p {
+  opacity: 70%;
+}
+
+/* Experience */
+.technical-container img {
+  width: 550px;
+  height: 325px;
+}
+
+/* Experience - technical skills */
+#technical-banner {
+  height: 1900px;
+  width: 70%;
+  margin: 0 auto auto auto;
+  padding-top: 1em;
+  text-align: center;
+  align-items: center;
+  align-content: center; 
+}
+
+#technical-header {
+  font-size: 40px;
+  text-decoration: underline;
+  opacity: 70%;
+  text-align: center;
+  margin-top: 2.5em;
+  color:rgb(246, 149, 4);
+}
+
+.technical-container {
+  height: 2000px;
+  width: 80%;
+  padding-top: 2em;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+.bot-container,
+.vision-container,
+.plc-container,
+.app-container {
+  display: inline-block;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0.5em;
+  align-content: center;
+  align-items: center;
+}
+
+.tc-left {
+  float: left;
+  width: 28%;
+  height: auto;
+  margin: 1em;
+  text-align: center;
+  border: 1px solid orange;
+}
+
+.tc-right {
+  float: right;
+  width: 28%;
+  height: auto;
+  margin: 1em;
+  text-align: center; 
+  border: 1px solid orange;
+}
+
+.technical-container h5 p {
+  opacity: 80%;
+}
+
+
+/* Experiene - Core Competencies*/
+.core-banner {
+  height: 20em;
+  width: 90%;
+  margin: .5em auto auto auto;
+  padding-top: .5em;
+  padding-left: 2em;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+.core-header {
+  font-size: 32px;
+  text-decoration: underline;
+}
+
+.core-container {
+  display: flex;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 1em;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.list {
+  height: auto;
+  width: 28%;
+  margin-right: 1rem;
+  padding: 1em;
+  border: 1px solid orange;
+  background-color: black;
+  opacity: 80%;
+  float: left;
+}
+
+/* Mobile & Tablet layout */
+
+/* Home Page */
+@media screen and (max-width: 1024px) {
+  #section_container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Contact Page - Media */ 
+@media screen and (max-width: 1024px) {
+  #contact-page {
+    margin: 0 auto;
+    align-items: center;
+    align-content: center;
+    padding: 1em;
+  }
+
+  .contact-header img {
+    max-width: 100%;
+    max-height: 75%;
+  }
+
+  .form-control {
+    width: 90%;
+  }
+}
+
+/* About Me Page - Media */
+@media screen and (max-width: 1024px) {
+  .about_container_img {
+    height: 50%;
+  }
+
+  .about_overlay {
+    width: 100%;
+    font-size: 32px;
+  }
+}
+
+/* Experience Page- Media */
+@media screen and (max-device-width) {
+  #technical-banner {
+    text-align: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .technical-container {
+    max-width: 100%;
+    max-height: auto;
+  }
+
+  .bot-container,
+  .vision-container,
+  .plc-container,
+  .app-container {
+    max-width: 100%;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+  } 
+
+  .technical-container img {
+    width: 100%;
+    height: 90%;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .bot-items,
+  .vision-items,
+  .plc-items,
+  .app-items {
+    width: 100%;
+    border: none;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+ /* Core - Competencies */
+  #core-competenies {
+    text-align: center;
+    max-width: 100%;
+    margin-top: auto;
+  }
+
+  .core-container {
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    align-content: center;
+  }
+
+  .list {
+    border: none;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    margin: 0;
+    list-style: none;
+    margin-left: -1em;
+    background-color: rgb(17, 17, 17);
+    opacity: 80%;
+  }
+
+  .list li {
+    margin-right: 0.35em;
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
